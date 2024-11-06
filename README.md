@@ -15,8 +15,8 @@ Follow these steps to set up and run the application:
 1. **Clone the Repository**
 
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-name>
+   git https://github.com/larshansen1/python_postgres_stack.git
+   cd python_postgres_stack
    ```
 
 2. **Copy the .env Template and Fill Out Values**
