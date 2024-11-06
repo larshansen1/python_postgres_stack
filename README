@@ -32,7 +32,7 @@ POSTGRES_PASSWORD
 POSTGRES_DB
 DATABASE_URL
 
-3. **Start the Application with Docker Compose
+3. **Start the Application with Docker Compose**
 
 Build and start the services in detached mode:
 
@@ -46,7 +46,7 @@ Once the containers are up, access the Python application through NGINX at http:
 
 You should see a JSON response with a sample record retrieved from the PostgreSQL database.
 
-##Documentation
+##Documentation**
 
 1. **Directory structure
 
