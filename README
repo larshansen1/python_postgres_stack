@@ -22,7 +22,7 @@ Follow these steps to set up and run the application:
 
 Copy the .env.template file to create a new .env file, then replace placeholder values with your desired configuration:
 
-bash
+```bash
 Kopier kode
 cp .env.template .env
 Open .env and set values for:
@@ -36,7 +36,7 @@ DATABASE_URL
 
 Build and start the services in detached mode:
 
-bash
+```bash
 Kopier kode
 docker-compose up --build -d
 
