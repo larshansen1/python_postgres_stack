@@ -1,0 +1,27 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore environment variables and credentials
+.env
+.env.template
+
+# Ignore Docker-specific files and folders
+pgdata/
+*.log
+docker-compose.override.yml
+
+# Ignore Python dependencies (if a virtual environment is created within the project)
+venv/
+*.egg-info/
+
+# Ignore PyCharm or VSCode project settings
+.idea/
+.vscode/
+
+# Ignore temporary files
+*.tmp
+*.swp
+.DS_Store
+
