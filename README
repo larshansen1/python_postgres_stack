@@ -17,39 +17,43 @@ Follow these steps to set up and run the application:
    ```bash
    git clone <your-repo-url>
    cd <your-repo-name>
+   ```
 
-2. **Copy the .env Template and Fill Out Values
+2. **Copy the .env Template and Fill Out Values**
 
-Copy the .env.template file to create a new .env file, then replace placeholder values with your desired configuration:
+   Copy the `.env.template` file to create a new `.env` file, then replace placeholder values with your desired configuration:
 
-```bash
-Kopier kode
-cp .env.template .env
-Open .env and set values for:
+   ```bash
+   cp .env.template .env
+   ```
 
-POSTGRES_USER
-POSTGRES_PASSWORD
-POSTGRES_DB
-DATABASE_URL
+   Open `.env` and set values for:
+   - `POSTGRES_USER`
+   - `POSTGRES_PASSWORD`
+   - `POSTGRES_DB`
+   - `DATABASE_URL`
 
 3. **Start the Application with Docker Compose**
 
-Build and start the services in detached mode:
+   Build and start the services in detached mode:
 
-```bash
-Kopier kode
-docker-compose up --build -d
+   ```bash
+   docker-compose up --build -d
+   ```
 
-4. **Access the Application
+4. **Access the Application**
 
-Once the containers are up, access the Python application through NGINX at http://localhost:80.
+   Once the containers are up, access the Python application through NGINX at [http://localhost:80](http://localhost:80).
 
-You should see a JSON response with a sample record retrieved from the PostgreSQL database.
+   You should see a JSON response with a sample record retrieved from the PostgreSQL database.
 
-##Documentation**
+## Documentation
 
-1. **Directory structure
+### Directory Structure
 
+The directory structure of the project is as follows:
+
+```plaintext
 project/
 ├── docker-compose.yml      # Docker Compose configuration
 ├── .env.template           # Environment variable template
@@ -61,12 +65,13 @@ project/
 │   └── default.conf        # NGINX reverse proxy settings
 └── postgres/               # PostgreSQL initialization
     └── init.sql            # SQL script to initialize database
+```
 
-2. **Notes
+### Notes
 
-Environment Variables: The .env file is used to store sensitive information and should not be committed to version control.
+- **Environment Variables**: The `.env` file is used to store sensitive information and should not be committed to version control.
+- **Persistence**: The PostgreSQL database uses a Docker volume for data persistence.
+- **Ports**: Ensure that port `80` is available on your host for NGINX to route requests properly.
 
-Persistence: The PostgreSQL database uses a Docker volume for data persistence.
-
-Ports: Ensure that port 80 is available on your host for NGINX to route requests properly.
+Enjoy experimenting with the setup, and feel free to extend it to suit your needs!
 
